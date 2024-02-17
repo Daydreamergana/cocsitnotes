@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Javascript code---------------->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin="anonymous"></script>
+    <style>
+        body {
+            height: 100%;
+        }
+    </style>
+    <title>Signup with us</title>
+</head>
+
+<body>
+
+<div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+    <strong>Message:</strong>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-sm-4 ">
+            <center style="color:white; background-color:green;font-size:30px">Already have an account?</center>
+            <hr>
+            <p> If you already have an account on this website,<br> Click here to Login.<br>
+                <a href="Login.html" class="btn btn-danger text-white mt-5 mb-5" style="padding:10px">LOGIN NOW!!</a></p>
+        </div>
+
+        <div class="col-sm-8 ">
+            <center style="color:white; background-color:black;font-size:30px">Create an account!</center>
+            <hr>
+
+            <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+
+                <div class="form-row">
+                    <div class="col">
+                        <label style="font-size:19px;font-family:Times New Roman">First Name:</label>
+                        <input type="text" class="form-control" placeholder="First letter should be Capital"
+                               name="firstname" id="firstname" required>
+                    </div>
+                    <div class="col">
+                        <label style="font-size:19px;font-family:Times New Roman">Last Name:</label>
+                        <input type="text" class="form-control" placeholder="First letter should be Capital"
+                               name="lastname" id="lastname" required> <br>
+                    </div>
+                </div>
+
+                <label style="font-size:19px;font-family:Times New Roman">Email address:</label>
+                <input type="email" class="form-control" placeholder="Enter your Email-Id" name="emailid" id="emailid"
+                       required>
+                <small class="form-text text-muted">We'll never share your email with anyone
+                    else.</small><br>
+                <div class="form-row">
+                    <div class="col">
+                        <label style="font-size:19px;font-family:Times New Roman">Class:</label>
+                        <select class="form-control " name="classname" id="classname" required>
+                            <option value="Bsc(C.S)F.Y">BCS</option>
+                            <option value="Bsc(C.S)S.Y">BCA</option>
+                            <option value="Bsc(C.S)T.Y">BSE</option>
+                            <option value="Bsc(C.S)T.Y">Bvoc.</option>
+                            <option value="Bsc(C.S)T.Y">Biotech.</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label style="font-size:19px;font-family:Times New Roman">Year:</label>
+                        <select class="form-control " name="year" id="year" required>
+                            <option value="First Year">First Year</option>
+                            <option value="Second Year">Second Year</option>
+                            <option value="Third Year">Third Year</option>
+                        </select>
+                    </div>
+
+                    <div class="col">
+                        <label style="font-size:19px;font-family:Times New Roman">College:</label>
+                        <select class="form-control " name="college" id="college" required>
+                            <option value="COCSIT College,Latur">COCSIT College,Latur</option>
+                            <option value="Rajashri Shahu College,Latur">Rajashri Shahu College,Latur</option>
+                            <option value="Dayanand College,Latur">Dayanand College,Latur</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                </div>
+                <br>
+
+                <label style="font-size:19px;font-family:Times New Roman">Password:</label>
+                <input type="password" class="form-control" placeholder="Password length should be maximum 10 characters"
+                       name="password" id="password" required> <br>
+                <div class="text-center">
+                    <input type="submit" class="btn btn-danger mt-0" style="padding: 5px 30px;margin-bottom:5px; font-weight:bold;font-size:20px"
+                           value="SIGN UP!!">
+                </div>
+            </form>
+
+            <?php
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                $conn = mysqli_connect("localhost", "root", "", "college_notes");
+
+                if ($conn === false) {
+                    die("ERROR: Could not connect. " . mysqli_connect_error());
+                }
+
+                $first_name = $_POST['firstname'];
+                $last_name = $_POST['lastname'];
+                $email = $_POST['emailid'];
+                $classname = $_POST['classname'];
+                $year = $_POST['year'];
+                $college = $_POST['college'];
+                $password = $_POST['password'];
+
+                $sql = "INSERT INTO student (first_name, last_name, email, class_name, year, college_name, password) VALUES ('$first_name', '$last_name', '$email', '$classname', '$year', '$college', '$password')";
+
+                if (mysqli_query($conn, $sql)) {
+                    echo "<h3>data stored in a database successfully."
+                        . " Please browse your localhost php my admin"
+                        . " to view the updated data</h3>";
+                    echo "<script>window.location.href = 'http://localhost/project3/login.php';</script>";
+                    exit;
+                } else {
+                    echo "ERROR: Hush! Sorry $sql. " . mysqli_error($conn);
+                }
+
+                mysqli_close($conn);
+            }
+            ?>
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>
